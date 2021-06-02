@@ -1,0 +1,172 @@
+program teste 
+integer i1 , i2 , i3 , i4 , count 
+string s1 , s2 , s3 
+integer i5 , i7 
+real r1 , r2 , r3 , r4 , x 
+string nome , cor , endereco 
+count := 0 
+#tmp1 := 5 > 10.5 
+if not #tmp1 goto 00 
+ 
+x := 10 
+i4 := 10 
+i4 := 20 
+i2 := 30 
+r1 := 1.5 
+i1 := 2 + 3 
+r2 := r1 
+r3 := i1 + r1 
+#tmp1 := i1 / 10 
+#tmp2 := r1 + i2 
+r4 := #tmp1 * #tmp2 
+#tmp1 := r4 + 1 
+#tmp2 := i1 / 15.2 
+r3 := #tmp1 - #tmp2 
+i2 := 5 
+#tmp1 := 5 > r2 
+if not #tmp1 goto 00 
+ 
+param s1 
+param s2 
+call all,  2 
+else 
+#tmp1 := r2 < 100 
+#tmp2 := r3 <> r4 
+#tmp1 := #tmp1 and #tmp2 
+if not #tmp1 goto 00 
+ 
+r2 := r2 + 1 
+repeat 
+r2 := r2 + 2 
+r3 := r3 + 3 
+i1 := i1 + count 
+#tmp1 := r1 = 20 
+#tmp2 := r3 < 30 
+#tmp1 := #tmp1 or #tmp2 
+if not #tmp1 goto 40 
+param nome 
+param cor 
+call all,  2 
+#tmp1 := r1 <> 20 
+#tmp2 := i1 <= 30 
+#tmp2 := #tmp2 or #tmp1 
+#tmp1 := r3 > 30.5 
+#tmp3 := i1 >= 0 
+#tmp1 := #tmp1 and #tmp3 
+#tmp1 := #tmp1 or #tmp2 
+if not #tmp1 goto 00 
+ 
+r2 := r3 + 1 
+i1 := i2 + 2 
+param s1 
+param s2 
+call all,  2 
+#tmp1 := r4 > r3 
+if not #tmp1 goto 00 
+ 
+r1 := 0 
+i7 := i5 
+i7 := i7 + 2 
+i7 := i7 - i1 
+r2 := r1 
+r2 := r2 + i4 
+r2 := r2 / 3 
+count := count + 1 
+FIM. 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+============= Gerador de Codigo Final ==============
+
+COPY 0, count
+COPY 10.5, #tmp1
+> 5, #tmp1
+COPY not tmp1
+CMP tmp1
+JNZ 00
+COPY 10, x
+COPY 10, i4
+COPY 20, i4
+COPY 30, i2
+COPY 1.5, r1
+COPY 3, i1
+ADD 2, i1
+COPY r1, r2
+COPY r1, r3
+ADD i1, r3
+COPY 10, #tmp1
+DIV i1, #tmp1
+COPY i2, #tmp2
+ADD r1, #tmp2
+COPY #tmp2, r4
+MUL #tmp1, r4
+COPY 1, #tmp1
+ADD r4, #tmp1
+COPY 15.2, #tmp2
+DIV i1, #tmp2
+COPY #tmp2, r3
+SUB #tmp1, r3
+COPY 5, i2
+COPY r2, #tmp1
+> 5, #tmp1
+COPY not tmp1
+CMP tmp1
+JNZ 00
+param s1
+param s2
+call all,  2
+COPY 100, #tmp1
+< r2, #tmp1
+COPY r4, #tmp2
+<> r3, #tmp2
+AND #tmp2, #tmp1
+COPY not tmp1
+CMP tmp1
+JNZ 00
+ADD 1, r2
+ADD 2, r2
+ADD 3, r3
+ADD count, i1
+COPY 20, #tmp1
+= r1, #tmp1
+COPY 30, #tmp2
+< r3, #tmp2
+OR #tmp2, #tmp1
+COPY not tmp1
+CMP tmp1
+JNZ 40
+param nome
+param cor
+call all,  2
+COPY 20, #tmp1
+<> r1, #tmp1
+COPY 30, #tmp2
+ i1, #tmp2
+OR #tmp1, #tmp2
+COPY 30.5, #tmp1
+> r3, #tmp1
+COPY 0, #tmp3
+>= i1, #tmp3
+AND #tmp3, #tmp1
+OR #tmp2, #tmp1
+COPY not tmp1
+CMP tmp1
+JNZ 00
+COPY 1, r2
+ADD r3, r2
+COPY 2, i1
+ADD i2, i1
+param s1
+param s2
+call all,  2
+COPY r3, #tmp1
+> r4, #tmp1
+COPY not tmp1
+CMP tmp1
+JNZ 00
+COPY 0, r1
+COPY i5, i7
+ADD 2, i7
+SUB i1, i7
+COPY r1, r2
+ADD i4, r2
+DIV 3, r2
+ADD 1, count
