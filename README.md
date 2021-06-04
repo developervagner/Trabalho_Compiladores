@@ -7,3 +7,5 @@ Trabalho de compiladores para realização das 6 fases, dentre elas:
 4 - Gerador de código Intermediário
 5 - Otimização do Código
 6 - Gerador de Código Final.
+
+    Erros precisam ser corrigidos
